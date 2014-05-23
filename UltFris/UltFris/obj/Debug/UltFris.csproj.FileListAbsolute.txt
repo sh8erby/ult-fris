@@ -1,0 +1,6 @@
+D:\GitHub\ult-fris\UltFris\UltFris\bin\UltFris.dll.config
+D:\GitHub\ult-fris\UltFris\UltFris\bin\UltFris.dll
+D:\GitHub\ult-fris\UltFris\UltFris\bin\UltFris.pdb
+D:\GitHub\ult-fris\UltFris\UltFris\obj\Debug\UltFris.csprojResolveAssemblyReference.cache
+D:\GitHub\ult-fris\UltFris\UltFris\obj\Debug\UltFris.dll
+D:\GitHub\ult-fris\UltFris\UltFris\obj\Debug\UltFris.pdb
