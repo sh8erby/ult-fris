@@ -1,0 +1,10 @@
+﻿body {
+    padding: 10% 25% 0 25%;
+
+}
+
+
+#messagesDiv{
+    border: solid;
+    border-width: 5px;
+}

@@ -1,20 +1,57 @@
 ﻿<!doctype html>
 <html ng-app="myapp">
 <head>
+    <link href="../Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/css/custom.css" rel="stylesheet" />
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.6/angular.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://www.firebase.com/css/example.css">
+    <!--<link rel="stylesheet" type="text/css" href="https://www.firebase.com/css/example.css">-->
+    <script src="../Content/Scripts/bootstrap.js"></script>
     <script src="../Content/app/app.js"></script>
 </head>
 <body ng-controller="MyController">
-    <div id="messagesDiv">
-        <div ng-repeat="msg in messages"><em>{{msg.from}}</em>: {{msg.body}}</div>
+    <div>
+        <div>
+            FirstName:
+            <input type="text" ng-model="perName">
+        </div>
+        <!--<div>
+            LastName:
+            <input type="text" ng-model="perLName">
+        </div>-->
+
+        <div>
+            Throw:
+            <input type="text" ng-model="perThrow">
+        </div>
+
+        <div>
+            Catch:
+            <input type="text" ng-model="perCatch">
+        </div>
+
+        <div>
+            Run:
+            <input type="text" ng-model="perRun">
+        </div>
+
+        <div>
+            Defense:
+            <input type="text" ng-model="perDefense">
+        </div>
+
+        <!--<input type="text" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message...">-->
+        <button type="button" class="btn btn-default" ng-click="addMess($event)">Save</button>
     </div>
-    <input type="text" ng-model="name" placeholder="Name">
-    <!--<input type="text" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message...">-->
-    <input type="text" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message...">
-    <button ng-click="addMess($event)">here</button>
-    
+
+
+    <div id="messagesDiv">
+        <div ng-repeat="this in players"><em> {{this.name}}</em>: {{this.throw}}, {{this.catch}}, {{this.run}}, {{this.defense}}</div>
+    </div>
+
+
 </body>
 </html>

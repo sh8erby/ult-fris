@@ -58,11 +58,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\app\app.js" />
+    <Content Include="Content\app\controller1.js" />
     <Content Include="Content\app\index.js" />
     <Content Include="Content\css\bootstrap-theme.css" />
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\custom.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
