@@ -15,13 +15,10 @@
 <body ng-controller="MyController">
     <div>
         <div>
-            FirstName:
-            <input type="text" ng-model="perName">
+            Name:
+            <input type="text" ng-model="perFName">
+             <input type="text" ng-model="perLName">
         </div>
-        <!--<div>
-            LastName:
-            <input type="text" ng-model="perLName">
-        </div>-->
 
         <div>
             Throw:
@@ -31,6 +28,11 @@
         <div>
             Catch:
             <input type="text" ng-model="perCatch">
+        </div>
+
+        <div>
+            Height:
+            <input type="text" ng-model="perHeight">
         </div>
 
         <div>
@@ -49,9 +51,32 @@
 
 
     <div id="messagesDiv">
-        <div ng-repeat="this in players"><em> {{this.name}}</em>: {{this.throw}}, {{this.catch}}, {{this.run}}, {{this.defense}}</div>
+        <div ng-repeat="this in players" >
+        <div id="{{this.PID}}">
+            <div><em> {{this.name}}</em>: 
+            </div>
+                <div>
+                    throw - {{this.throw}}
+                </div>
+                <div>
+                    catch - {{this.catch}}
+                </div>
+                <div>
+                    height - {{this.height}}
+                </div>
+                <div>
+                    run - {{this.run}}
+                </div>
+                <div>
+                    defense - {{this.defense}}
+                </div>        
+            </div>
+        </div>  
     </div>
 
+    <div id="testId">
+        
+    </div>
 
 </body>
 </html>

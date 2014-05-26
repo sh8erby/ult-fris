@@ -2,6 +2,8 @@
         .value('fbAuthToken', 'KVHxq4JCUBdBAfy7Aa3M6ca0mEq9ZE2zqltgI83e')
         .value('fbURL', 'https://ultfris.firebaseio.com/');
 
+
+
 function MyController($scope, $firebase) {
 
     var ref = new Firebase("https://ultfris.firebaseio.com/");
@@ -9,8 +11,9 @@ function MyController($scope, $firebase) {
     
     //displays object that shows all the players
     thisplaya.on('value', function (mahfriend) {
-        var allPlayers = mahfriend.val();
+         var allPlayers= mahfriend.val();
 
+        //displays the name of each child node
         for (var test in allPlayers) {
             var childNode = thisplaya.child(test);
             
@@ -20,8 +23,7 @@ function MyController($scope, $firebase) {
         }
     });
     
-    $scope.players = $firebase(thisplaya);
-
+    
  
     //ref.on('value', function (snapshot) {
 
@@ -48,20 +50,26 @@ function MyController($scope, $firebase) {
     //    });
     //$scope.name = "";
     //$scope.msg = "";
+    $scope.players = $firebase(thisplaya);
 
     $scope.addMess = function (e) {
         thisplaya.push({
-            name: $scope.perName,
+            PID: $scope.perFName + $scope.perLName,
+            name: $scope.perFName,
             throw: $scope.perThrow,
             catch: $scope.perCatch,
+            height: $scope.perHeight,
             run: $scope.perRun,
             defense: $scope.perDefense
+
         });
 
-        $scope.perName = "";
+        $scope.perFName = "";
+        $scope.perLName = "";
         $scope.perThrow = "";
         $scope.perCatch = "";
         $scope.perRun = "";
+        $scope.perHeight = "";
         $scope.perDefense = "";
     }
 
