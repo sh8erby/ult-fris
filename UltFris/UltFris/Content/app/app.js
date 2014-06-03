@@ -3,7 +3,6 @@
         .value('fbURL', 'https://ultfris.firebaseio.com/');
 
 
-
 function MyController($scope, $firebase) {
 
     var ref = new Firebase("https://ultfris.firebaseio.com/");
@@ -17,12 +16,13 @@ function MyController($scope, $firebase) {
         for (var test in allPlayers) {
             var childNode = thisplaya.child(test);
             
-            childNode.on('value', function (thisChild) {
-                console.log(thisChild.val().name);
-            })
+            //childNode.on('value', function (thisChild) {
+              //  console.log(thisChild.val().name);
+            //})
         }
     });
     
+
     
  
     //ref.on('value', function (snapshot) {

@@ -3,8 +3,16 @@
 
 }
 
-
-#messagesDiv{
+.messagesDiv{
     border: solid;
     border-width: 5px;
+}
+
+#roster{
+
+}
+
+.card{
+	margin:10px;
+	/*cursor: pointer;*/
 }
