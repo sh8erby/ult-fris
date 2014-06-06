@@ -1,0 +1,52 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+    <link href="../Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/css/custom.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.6/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="https://www.firebase.com/css/example.css">-->
+    <script src="../Content/Scripts/bootstrap.js"></script>
+    <script src="../Content/app/app.js"></script>
+    <script src="../Content/app/controller1.js"></script>
+</head>
+<body ng-controller="MyController">
+   
+
+    <div id="roster">
+        <div ng-repeat="this in players" >
+            <div id="{{this.PID}}" class="card">
+                <div><em> {{this.name}} {{this.PID}} </em>: 
+                </div>
+                <div>
+                    throw - {{this.throw}}
+                </div>
+                <div>
+                    catch - {{this.catch}}
+                </div>
+                <div>
+                    height - {{this.height}}
+                </div>
+                <div>
+                    run - {{this.run}}
+                </div>
+                <div>
+                    defense - {{this.defense}}
+                </div>        
+            </div>
+            <button type="button" class="btn btn-default add">+</button>
+            <button type="button" class="btn btn-default edit">edit</button>
+            <button type="button" class="btn btn-default delete">delete</button>
+        </div>  
+        
+    </div>
+
+    <div id="testId">
+        
+    </div>
+
+</body>
+</html>

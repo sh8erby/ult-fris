@@ -1,0 +1,18 @@
+﻿body {
+    padding: 5% 25% 0 25%;
+
+}
+
+.messagesDiv{
+    border: solid;
+    border-width: 5px;
+}
+
+#roster{
+
+}
+
+.card{
+	margin:10px;
+	/*cursor: pointer;*/
+}

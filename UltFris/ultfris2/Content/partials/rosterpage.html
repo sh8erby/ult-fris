@@ -1,0 +1,29 @@
+﻿
+<div id="roster">
+    <div ng-repeat="this in players">
+        <div id="{{this.PID}}" class="card">
+            <div>
+                <em> {{this.name}} {{this.PID}} </em>:
+            </div>
+            <div>
+                throw - {{this.throw}}
+            </div>
+            <div>
+                catch - {{this.catch}}
+            </div>
+            <div>
+                height - {{this.height}}
+            </div>
+            <div>
+                run - {{this.run}}
+            </div>
+            <div>
+                defense - {{this.defense}}
+            </div>
+        </div>
+        <button type="button" class="btn btn-default add">+</button>
+        <button type="button" class="btn btn-default edit">edit</button>
+        <button type="button" class="btn btn-default delete">delete</button>
+    </div>
+
+</div>

@@ -21,10 +21,7 @@ function MyController($scope, $firebase) {
             //})
         }
     });
-    
-
-    
- 
+     
     //ref.on('value', function (snapshot) {
 
     //    var firstName = snapshot.val();
@@ -50,6 +47,8 @@ function MyController($scope, $firebase) {
     //    });
     //$scope.name = "";
     //$scope.msg = "";
+    
+    //shows the roster
     $scope.players = $firebase(thisplaya);
 
     $scope.addMess = function (e) {
