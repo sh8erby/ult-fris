@@ -22,35 +22,11 @@ function MyController($scope, $firebase) {
         }
     });
      
-    //ref.on('value', function (snapshot) {
 
-    //    var firstName = snapshot.val();
-    //    var lastName = snapshot.val();
-    //});
-
-    ////keycode 13 is enter
-    ////$scope.addMessage = function (e) {
-    ////    if (e.keyCode != 13) {
-    ////        return;
-    ////    }
-    ////    $scope.messages.$add({ from: $scope.name, body: $scope.msg });
-    ////    $scope.msg = "";
-    ////}
-
-    //$scope.addMess = function (e) {
-    //    $scope.messages.$add({
-    //        name: $scope.perName,
-    //        throw: $scope.perThrow,
-    //        catch: $scope.perCatch,
-    //        run: $scope.perRun,
-    //        defense: $scope.perDefense
-    //    });
-    //$scope.name = "";
-    //$scope.msg = "";
-    
-    //shows the roster
+    //shows the roster controller
     $scope.players = $firebase(thisplaya);
 
+    //create controller
     $scope.addMess = function (e) {
         thisplaya.push({
             PID: $scope.perFName + $scope.perLName,
@@ -72,6 +48,7 @@ function MyController($scope, $firebase) {
         $scope.perDefense = "";
     }
 
+    
 
 
 }
