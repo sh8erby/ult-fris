@@ -1,0 +1,33 @@
+﻿<div>
+    Name:
+    <input type="text" ng-model="perFName" placeholder="First name">
+    <input type="text" ng-model="perLName" placeholder="Last name">
+</div>
+
+<div>
+    Throw:
+    <input type="text" ng-model="perThrow" placeholder="0-10">
+</div>
+
+<div>
+    Catch:
+    <input type="text" ng-model="perCatch" placeholder="0-10">
+</div>
+
+<div>
+    Height:
+    <input type="text" ng-model="perHeight" placeholder="0-10">
+</div>
+
+<div>
+    Run:
+    <input type="text" ng-model="perRun" placeholder="0-10">
+</div>
+
+<div>
+    Defense:
+    <input type="text" ng-model="perDefense" placeholder="0-10">
+</div>
+
+<!--<input type="text" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message...">-->
+<button type="button" class="btn btn-default" ng-click="updatePlayer($event)">Save</button>

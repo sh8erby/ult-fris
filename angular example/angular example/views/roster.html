@@ -1,0 +1,36 @@
+﻿<div id="roster">   
+    <table class="table table-striped">
+       
+        <tbody>
+            <tr ng-repeat="message in que">
+                <td>{{message}}</td>               
+            </tr>
+        </tbody>
+    </table>
+    <div ng-repeat="this in players">
+        <div id="{{this.PID}}" class="card">
+            <div>
+                <em> {{this.name}} {{this.PID}} </em>:
+            </div>
+            <div>
+                throw - {{this.throw}}
+            </div>
+            <div>
+                catch - {{this.catch}}
+            </div>
+            <div>
+                height - {{this.height}}
+            </div>
+            <div>
+                run - {{this.run}}
+            </div>
+            <div>
+                defense - {{this.defense}}
+            </div>
+        </div>
+        <button type="button" class="btn btn-default" ng-click="addQueue(this)">+</button>
+        <button type="button" class="btn btn-default" ng-click="editPlayer(this)">edit</button>
+        <button type="button" class="btn btn-default" ng-click="DeletePlayer">delete</button>
+    </div>
+
+</div>
