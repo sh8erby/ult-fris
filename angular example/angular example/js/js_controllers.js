@@ -10,13 +10,14 @@ project.controller('DebugCtrl', function ($scope, fbDebugMsg, fbRequestUrl) {
     $scope.fbRequestUrl = fbRequestUrl;
 });
 
+//done
 project.controller('CreateCtrl',function ($scope, fbaRoster){
     var thisplaya = fbaRoster;
     
     $scope.addPlayer = function ()
     {
         thisplaya.$add({
-            PID: $scope.perFName + $scope.perLName,
+            PID: $scope.perFName +"_"+ $scope.perLName,
             name: $scope.perFName,
             throw: $scope.perThrow,
             catch: $scope.perCatch,
@@ -35,6 +36,8 @@ project.controller('CreateCtrl',function ($scope, fbaRoster){
     }
 });
 
+//fix edit, delete, when clicked make the card background different color
+//also if active in the queue and clicked again, remove from queue (in the future)
 project.controller('RosterCtrl', function ($scope,  fbaRoster, fbaQueue){
     $scope.players = fbaRoster;   
     $scope.que = fbaQueue;
@@ -62,18 +65,47 @@ project.controller('RosterCtrl', function ($scope,  fbaRoster, fbaQueue){
 
 });
 
-project.controller('QueueCtrl', function ($scope, fbaQueue) {
+project.controller('QueueCtrl', function ($scope, fbaQueue, fbQueue) {
     $scope.que = fbaQueue;
-    var fifties = [];
-    var fourties = [];
+    var teamQueue = fbQueue;
+
+    var fourtiesplus = [];    
     var thirties = [];
-    var Everyone = [];
+    var Everyone = [];    
     
-    angular.forEach($scope.que, function () {
-        //extract all everything in the queue
-        var hello = $scope.que.name;
+    //once finished, but in the create teams function
+    teamQueue.on('value', function (thisPerson) {
+        var playerQueue = thisPerson.val();
+
+        for (var player in playerQueue)
+        {
+            var teamPlayer = teamQueue.child(player);
+
+            teamPlayer.on('value', function (thisPlayer) {
+                if (thisPlayer.val().stats > 39)
+                    fourtiesplus.push(thisPlayer.val().PID);
+                else if (thisPlayer.val().stats > 29)
+                    thirties.push(thisPlayer.val().PID);
+                else
+                    Everyone.push(thisPlayer.val().PID);
+            })
+            //shows the name of the child
+            //need to put in to check the value of the stat
+            //if stat > 40, push into the fourties+ array
+            //
+            //split teams randomly
+            //
+            
+        }
 
     });
+
+    //angular.forEach($scope.que, function () {
+    //    //extract all everything in the queue
+    //    var hello = $scope.que.name;
+    //    //alert();
+
+    //});
 
     $scope.clearQueue = function ()
     {

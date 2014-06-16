@@ -4,3 +4,9 @@ C:\Users\Arnold\documents\visual studio 2013\Projects\angular example\angular ex
 C:\Users\Arnold\documents\visual studio 2013\Projects\angular example\angular example\bin\angular example.pdb
 C:\Users\Arnold\documents\visual studio 2013\Projects\angular example\angular example\obj\Debug\angular example.dll
 C:\Users\Arnold\documents\visual studio 2013\Projects\angular example\angular example\obj\Debug\angular example.pdb
+D:\GitHub\ult-fris\angular example\angular example\bin\angular example.dll.config
+D:\GitHub\ult-fris\angular example\angular example\bin\angular example.dll
+D:\GitHub\ult-fris\angular example\angular example\bin\angular example.pdb
+D:\GitHub\ult-fris\angular example\angular example\obj\Debug\angular example.csprojResolveAssemblyReference.cache
+D:\GitHub\ult-fris\angular example\angular example\obj\Debug\angular example.dll
+D:\GitHub\ult-fris\angular example\angular example\obj\Debug\angular example.pdb
