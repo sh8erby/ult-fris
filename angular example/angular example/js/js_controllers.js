@@ -60,7 +60,7 @@ project.controller('RosterCtrl', function ($scope,  fbaRoster, fbaQueue){
             stats: result
         })
 
-        console.log(result);
+        //console.log(result);
     }
 
 });
@@ -71,8 +71,11 @@ project.controller('QueueCtrl', function ($scope, fbaQueue, fbQueue) {
 
     var fourtiesplus = [];    
     var thirties = [];
-    var Everyone = [];    
-    
+    var Everyone = [];
+
+    $scope.teamA = [];
+    $scope.teamB = [];
+
     //once finished, but in the create teams function
     teamQueue.on('value', function (thisPerson) {
         var playerQueue = thisPerson.val();
@@ -88,24 +91,16 @@ project.controller('QueueCtrl', function ($scope, fbaQueue, fbQueue) {
                     thirties.push(thisPlayer.val().PID);
                 else
                     Everyone.push(thisPlayer.val().PID);
-            })
-            //shows the name of the child
-            //need to put in to check the value of the stat
-            //if stat > 40, push into the fourties+ array
-            //
-            //split teams randomly
-            //
-            
+            })                        
         }
+        //this will randomize each array
+        shuffleArray(fourtiesplus);
+        shuffleArray(thirties);
+        shuffleArray(Everyone);
 
     });
 
-    //angular.forEach($scope.que, function () {
-    //    //extract all everything in the queue
-    //    var hello = $scope.que.name;
-    //    //alert();
 
-    //});
 
     $scope.clearQueue = function ()
     {
@@ -118,3 +113,17 @@ project.controller('QueueCtrl', function ($scope, fbaQueue, fbQueue) {
 
     }
 });
+
+var shuffleArray = function (array) {
+    var m = array.length, t, i;
+    // While there remain elements to shuffle
+    while (m) {
+        // Pick a remaining element…
+        i = Math.floor(Math.random() * m--);
+        // And swap it with the current element.
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+    }
+    return array;
+}
