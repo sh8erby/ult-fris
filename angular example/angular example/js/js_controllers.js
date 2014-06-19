@@ -100,8 +100,6 @@ project.controller('QueueCtrl', function ($scope, fbaQueue, fbQueue) {
 
     });
 
-
-
     $scope.clearQueue = function ()
     {
         $scope.que.$remove()
@@ -109,8 +107,26 @@ project.controller('QueueCtrl', function ($scope, fbaQueue, fbQueue) {
 
     $scope.createTeams = function()
     {
+        var x = fourtiesplus;
+        var y = thirties;
+        var z = Everyone;
+
+        createTeam(fourtiesplus);
+        createTeam(thirties);
+        createTeam(Everyone);
         alert('soon');
 
+       
+    }
+    var createTeam = function (array)
+    {
+        while (array.length) {
+            if ($scope.teamA.length > $scope.teamB.length)
+                $scope.teamB.push(array.pop());
+            else
+                $scope.teamA.push(array.pop());            
+        }
+        return true;
     }
 });
 
@@ -127,3 +143,4 @@ var shuffleArray = function (array) {
     }
     return array;
 }
+
