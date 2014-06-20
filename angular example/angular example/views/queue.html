@@ -11,27 +11,29 @@
 
 <button type="button" class="btn btn-default" ng-click="createTeams()">Create Teams</button>
 
-<table class="table table-striped">   
+<div >
+    <table class="table table-striped">
+        <tbody>
+            <tr ng-repeat="player in teamA">
+                <td>{{player}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <tbody>
+            <tr ng-repeat="player in teamB">
+                <td>{{player}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<table class="table table-striped" >   
     <tbody>
         <tr ng-repeat="message in que">
             <td>{{message}}</td>
             <td>{{message.PID}}</td>
-        </tr>
-    </tbody>
-</table>
-
-<table class="table table-striped">
-    <tbody>
-        <tr ng-repeat="player in teamA">
-            <td>{{player}}</td>     
-        </tr>
-    </tbody>
-</table>
-
-<table class="table table-striped">
-    <tbody>
-        <tr ng-repeat="player in teamB">
-            <td>{{player}}</td>
         </tr>
     </tbody>
 </table>

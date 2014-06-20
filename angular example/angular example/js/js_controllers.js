@@ -114,12 +114,11 @@ project.controller('QueueCtrl', function ($scope, fbaQueue, fbQueue) {
         createTeam(fourtiesplus);
         createTeam(thirties);
         createTeam(Everyone);
-        alert('soon');
-
-       
+        //alert('soon');       
     }
     var createTeam = function (array)
     {
+        
         while (array.length) {
             if ($scope.teamA.length > $scope.teamB.length)
                 $scope.teamB.push(array.pop());
