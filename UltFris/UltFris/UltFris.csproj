@@ -57,44 +57,32 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\app\app.js" />
-    <Content Include="Content\app\controller1.js" />
-    <Content Include="Content\app\index.js" />
-    <Content Include="Content\js\app.js" />
-    <Content Include="Content\js\route.js" />
-    <Content Include="Content\css\bootstrap-theme.css" />
-    <Content Include="Content\css\bootstrap-theme.min.css" />
-    <Content Include="Content\css\bootstrap.css" />
-    <Content Include="Content\css\bootstrap.min.css" />
-    <Content Include="Content\css\custom.css" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="css\custom.css" />
+    <Content Include="directives\directives_topMenu.html" />
+    <Content Include="index.html" />
+    <Content Include="js\js_app.js" />
+    <Content Include="js\js_controllers.js" />
+    <Content Include="js\js_directives.js" />
+    <Content Include="js\js_factories.js" />
+    <Content Include="js\js_routes.js" />
+    <Content Include="js\modals.js" />
     <Content Include="packages.config" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Content\Scripts\jquery-1.9.0.intellisense.js" />
-    <Content Include="Content\Scripts\bootstrap.js" />
-    <Content Include="Content\Scripts\bootstrap.min.js" />
-    <Content Include="Content\Scripts\jquery-1.9.0.js" />
-    <Content Include="Content\Scripts\jquery-1.9.0.min.js" />
-    <Content Include="Content\Scripts\angular-mocks.js" />
-    <Content Include="Content\Scripts\angular-route.js" />
-    <Content Include="Content\Scripts\angular-route.min.js" />
-    <Content Include="Content\Scripts\angular.js" />
-    <Content Include="Content\Scripts\angular.min.js" />
-    <Content Include="Views\Create.html" />
-    <Content Include="Views\index.html" />
-    <Content Include="Views\Roster.html" />
-    <Content Include="Views\shell.html" />
+    <Content Include="views\create.html" />
+    <Content Include="views\edit.html" />
+    <Content Include="views\hello.html" />
+    <Content Include="views\queue.html" />
+    <Content Include="views\roster.html" />
+    <Content Include="views\rosterModal.html" />
+    <Content Include="views\_views_messages.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Scripts\jquery-1.9.0.min.map" />
-    <Content Include="Content\Scripts\angular.min.js.map" />
-    <Content Include="Content\Scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -102,10 +90,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\partials\" />
-    <Folder Include="Modules\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
