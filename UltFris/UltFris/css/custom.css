@@ -8,7 +8,6 @@
 }
 
 #roster{
-
 }
 
 #navbarr{
@@ -39,4 +38,7 @@
 
 .teamChart{
     margin: 10px;
+}
+.more-form{
+    margin-left:15px;
 }
