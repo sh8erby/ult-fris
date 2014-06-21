@@ -49,7 +49,7 @@ project.controller('RosterCtrl', function ($scope,  fbaRoster, fbaQueue){
         alert('soon');
     }
 
-    $scope.check = false;
+    //$scope.check = false;
     $scope.addQueue = function (player) {
         var result = parseInt(player.throw) +
                      parseInt(player.run) +

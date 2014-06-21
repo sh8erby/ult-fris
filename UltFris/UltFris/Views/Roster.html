@@ -11,7 +11,7 @@
             <div id="{{this.PID}}" class="card col-sm-12">
                 <div>
                     <em> {{this.name}} {{this.PID}} </em>:
-                    <span class="glyphicon glyphicon-ok" ng-show="check"></span>
+                    <!--<span class="glyphicon glyphicon-ok" ng-show="check"></span>-->
                 </div>
                 <div>
                     throw - {{this.throw}}
@@ -30,7 +30,7 @@
                 </div>
             </div>
         <div class="rosterButtons">
-            <button type="button" class="btn btn-default" ng-click="addQueue(this); check = !check">+</button>
+            <button type="button" class="btn btn-default" ng-click="addQueue(this)">+</button>
             <button type="button" class="btn btn-default" ng-click="editPlayer(this)">edit</button>
             <button type="button" class="btn btn-default" ng-click="deletePlayer()">delete</button>
         </div>
