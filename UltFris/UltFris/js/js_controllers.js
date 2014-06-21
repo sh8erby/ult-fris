@@ -42,10 +42,14 @@ project.controller('RosterCtrl', function ($scope,  fbaRoster, fbaQueue){
     $scope.players = fbaRoster;   
     $scope.que = fbaQueue;
     $scope.editPlayer = function (player) {
-        console.log(player);
-        $scope.showModal = false;
+        //console.log(player);
+        alert('soon');
+    }
+    $scope.deletePlayer = function () {
+        alert('soon');
     }
 
+    $scope.check = false;
     $scope.addQueue = function (player) {
         var result = parseInt(player.throw) +
                      parseInt(player.run) +

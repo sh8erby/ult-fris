@@ -1,35 +1,57 @@
-﻿<div>
-    Name:
-    <input type="text" ng-model="perFName" placeholder="First name">
-    <input type="text" ng-model="perLName" placeholder="Last name">
-</div>
-
+﻿
 <div>
-    Throw:
-    <input type="text" ng-model="perThrow" placeholder="0-10">
+
+    <form class="form-inline name-fields" role="form">
+        <label  class="col-sm-1 control-label name-label">Name:</label>
+        <div class="form-group">           
+            <input type="text" class="form-control" ng-model="perFName" placeholder="First name">
+        </div>
+        <div class="form-group">           
+            <input type="text" class="form-control"  ng-model="perLName" placeholder="Last name">
+        </div>
+    </form>
+
+    <form class="form-horizontal" role="form">
+
+        <div class="form-group">
+            <label class="col-sm-1 control-label">Throw:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="perThrow" placeholder="0-10">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-1 control-label">Catch:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="perCatch" placeholder="0-10">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  class="col-sm-1 control-label">Height</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="perHeight" placeholder="0-10">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-1 control-label">Run:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="perRun" placeholder="0-10">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-1 control-label">Defense:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="perDefense" placeholder="0-10">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-default" ng-click="addPlayer()">Save</button>
+            </div>
+        </div>
+    </form>
 </div>
-
-<div>
-    Catch:
-    <input type="text" ng-model="perCatch" placeholder="0-10">
-</div>
-
-<div>
-    Height:
-    <input type="text" ng-model="perHeight" placeholder="0-10">
-</div>
-
-<div>
-    Run:
-    <input type="text" ng-model="perRun" placeholder="0-10">
-</div>
-
-<div>
-    Defense:
-    <input type="text" ng-model="perDefense" placeholder="0-10">
-</div>
-
-<!--<input type="text" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message...">-->
-<!--<button type="button" class="btn btn-default" ng-submit="addPlayer($event)">Save</button>-->
-<button type="button" class="btn btn-default" ng-click="addPlayer()">Save</button>
-

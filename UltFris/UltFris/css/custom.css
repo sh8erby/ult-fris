@@ -1,4 +1,6 @@
-﻿
+﻿body{
+    padding-bottom:70px;
+}
 
 .messagesDiv{
     border: solid;
@@ -9,7 +11,32 @@
 
 }
 
+#navbarr{
+    padding: 0 0 0 0;
+}
+
 .card{
 	margin:10px;
 	/*cursor: pointer;*/
+}
+
+.rosterButtons{
+    margin:10px;
+}
+
+.name-fields{
+    margin:15px;
+}
+
+.name-label{
+    padding-top:7px;
+}
+
+.queueView{
+    margin-left: 10px ;
+    margin-top: 10px;
+}
+
+.teamChart{
+    margin: 10px;
 }

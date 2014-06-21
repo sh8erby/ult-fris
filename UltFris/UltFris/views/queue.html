@@ -4,39 +4,41 @@
 
 
 
+<div class="queueView">
 
 
+    <button type="button" class="btn btn-default" ng-click="clearQueue()">Clear Queue</button>
 
-<button type="button" class="btn btn-default" ng-click="clearQueue()">Clear Queue</button>
+    <button type="button" class="btn btn-default" ng-click="createTeams()">Create Teams</button>
 
-<button type="button" class="btn btn-default" ng-click="createTeams()">Create Teams</button>
+    <div class="teamChart">
+        <table class="table table-striped">
+            <tbody>
+                Team A:
+                <tr ng-repeat="player in teamA">
+                    <td>{{$index + 1}} {{player}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="teamChart">
+        <table class="table table-striped teamChart">
+            <tbody>
+                Team B:
+                <tr ng-repeat="player in teamB">
+                    <td>{{$index + 1}} {{player}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-<div>
     <table class="table table-striped">
+        Players:
         <tbody>
-            Team A:
-            <tr ng-repeat="player in teamA">
-                <td>{{player}}</td>
+            <tr ng-repeat="message in que">
+                <!--<td>{{message}}</td>-->
+                <td>{{message.PID}}</td>
             </tr>
         </tbody>
     </table>
 </div>
-<div>
-    <table class="table table-striped">
-        <tbody>
-            Team B:
-            <tr ng-repeat="player in teamB">
-                <td>{{player}}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<table class="table table-striped" >   
-    <tbody>
-        <tr ng-repeat="message in que">
-            <td>{{message}}</td>
-            <td>{{message.PID}}</td>
-        </tr>
-    </tbody>
-</table>

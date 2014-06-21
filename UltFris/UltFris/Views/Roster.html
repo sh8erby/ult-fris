@@ -1,36 +1,39 @@
-﻿<div id="roster">   
-    <table class="table table-striped">
-       
+﻿<div id="roster">
+    <!--<table class="table table-striped">
+
         <tbody>
             <tr ng-repeat="message in que">
-                <td>{{message}}</td>               
+                <td>{{message}}</td>
             </tr>
         </tbody>
-    </table>
-    <div ng-repeat="this in players">
-        <div id="{{this.PID}}" class="card">
-            <div>
-                <em> {{this.name}} {{this.PID}} </em>:
+    </table>-->
+    <div ng-repeat="this in players">     
+            <div id="{{this.PID}}" class="card col-sm-12">
+                <div>
+                    <em> {{this.name}} {{this.PID}} </em>:
+                    <span class="glyphicon glyphicon-ok" ng-show="check"></span>
+                </div>
+                <div>
+                    throw - {{this.throw}}
+                </div>
+                <div>
+                    catch - {{this.catch}}
+                </div>
+                <div>
+                    height - {{this.height}}
+                </div>
+                <div>
+                    run - {{this.run}}
+                </div>
+                <div>
+                    defense - {{this.defense}}
+                </div>
             </div>
-            <div>
-                throw - {{this.throw}}
-            </div>
-            <div>
-                catch - {{this.catch}}
-            </div>
-            <div>
-                height - {{this.height}}
-            </div>
-            <div>
-                run - {{this.run}}
-            </div>
-            <div>
-                defense - {{this.defense}}
-            </div>
+        <div class="rosterButtons">
+            <button type="button" class="btn btn-default" ng-click="addQueue(this); check = !check">+</button>
+            <button type="button" class="btn btn-default" ng-click="editPlayer(this)">edit</button>
+            <button type="button" class="btn btn-default" ng-click="deletePlayer()">delete</button>
         </div>
-        <button type="button" class="btn btn-default" ng-click="addQueue(this)">+</button>
-        <button type="button" class="btn btn-default" ng-click="editPlayer(this)">edit</button>
-        <button type="button" class="btn btn-default" ng-click="DeletePlayer">delete</button>
     </div>
 
 </div>
