@@ -57,9 +57,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="libs\bootstrap\Content\bootstrap.css" />
+    <Content Include="libs\bootstrap\Content\bootstrap.min.css" />
     <Content Include="css\custom.css" />
     <Content Include="directives\directive_createForm.html" />
     <Content Include="directives\directive_topMenu.html" />
+    <Content Include="libs\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
     <Content Include="js\js_app.js" />
     <Content Include="js\js_controllers.js" />
@@ -68,6 +71,14 @@
     <Content Include="js\js_routes.js" />
     <Content Include="js\modals.js" />
     <Content Include="packages.config" />
+    <Content Include="libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="libs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="libs\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="libs\bootstrap\Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="libs\bootstrap\Scripts\bootstrap.js" />
+    <Content Include="libs\bootstrap\Scripts\bootstrap.min.js" />
+    <Content Include="libs\bootstrap\Scripts\jquery-1.9.0.js" />
+    <Content Include="libs\bootstrap\Scripts\jquery-1.9.0.min.js" />
     <Content Include="views\create.html" />
     <Content Include="views\edit.html" />
     <Content Include="views\hello.html" />
@@ -81,6 +92,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="libs\bootstrap\Scripts\jquery-1.9.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -49,7 +49,7 @@ project.controller('RosterCtrl', function ($scope,  fbaRoster, fbaQueue){
         alert('soon');
     }
 
-    //$scope.check = false;
+    $scope.check = false;
     $scope.addQueue = function (player) {
         var result = parseInt(player.throw) +
                      parseInt(player.run) +
@@ -89,9 +89,9 @@ project.controller('QueueCtrl', function ($scope, fbaQueue, fbQueue) {
             var teamPlayer = teamQueue.child(player);
 
             teamPlayer.on('value', function (thisPlayer) {
-                if (thisPlayer.val().stats > 39)
+                if (thisPlayer.val().stats > 390)
                     fourtiesplus.push(thisPlayer.val().PID);
-                else if (thisPlayer.val().stats > 29)
+                else if (thisPlayer.val().stats > 290)
                     thirties.push(thisPlayer.val().PID);
                 else
                     Everyone.push(thisPlayer.val().PID);
@@ -106,7 +106,9 @@ project.controller('QueueCtrl', function ($scope, fbaQueue, fbQueue) {
 
     $scope.clearQueue = function ()
     {
-        $scope.que.$remove()
+        $scope.que.$remove();
+        //$scope.teamA.$remove();
+        //$scope.teamB.$remove();
     }
 
     $scope.createTeams = function()

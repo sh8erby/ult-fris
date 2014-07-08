@@ -41,4 +41,14 @@
 }
 .more-form{
     margin-left:15px;
+    margin-right:15px;
+}
+
+.footsie{
+    height:50px;
+    padding-top:15px;
+}
+
+a{
+    color:inherit;
 }
