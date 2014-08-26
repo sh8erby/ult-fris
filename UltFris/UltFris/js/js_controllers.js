@@ -38,7 +38,7 @@ project.controller('CreateCtrl',function ($scope, fbaRoster){
 
 //fix edit, delete, when clicked make the card background different color
 //also if active in the queue and clicked again, remove from queue (in the future)
-project.controller('RosterCtrl', function ($scope,  fbaRoster, fbaQueue){
+project.controller('RosterCtrl', function ($scope, fbaRoster, fbaQueue) {
     $scope.players = fbaRoster;   
     $scope.que = fbaQueue;
     $scope.editPlayer = function (player) {
