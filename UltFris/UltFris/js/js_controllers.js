@@ -23,7 +23,8 @@ project.controller('CreateCtrl',function ($scope, fbaRoster){
             catch: $scope.perCatch,
             height: $scope.perHeight,
             run: $scope.perRun,
-            defense: $scope.perDefense
+            defense: $scope.perDefense,
+            awareness: $scope.perAwareness
         })
   
             $scope.perFName = "";
@@ -33,6 +34,7 @@ project.controller('CreateCtrl',function ($scope, fbaRoster){
             $scope.perRun = "";
             $scope.perHeight = "";
             $scope.perDefense = "";
+            $scope.perAwareness = "";
     }
 });
 
@@ -55,7 +57,8 @@ project.controller('RosterCtrl', function ($scope, fbaRoster, fbaQueue) {
                      parseInt(player.run) +
                      parseInt(player.defense) +
                      parseInt(player.height) +
-                     parseInt(player.catch)
+                     parseInt(player.catch) +
+                     parseInt(player.awareness)
         ;
 
         $scope.que.$add({
